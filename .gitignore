@@ -1,0 +1,20 @@
+# Large firmware & ROM archives
+*.zip
+*.tar.gz
+*.bin
+*.img
+!proofs/*.png
+
+# Local credentials & configs
+*.conf
+*.bak
+*.pub
+
+# OS & temporary files
+.DS_Store
+Thumbs.db
+*~
+*.swp
+__pycache__/
+*.py[cod]
+/tmp/
