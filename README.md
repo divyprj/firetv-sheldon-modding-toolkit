@@ -9,19 +9,57 @@
 
 A battle-tested, professional engineering toolkit and technical reference guide for unlocking, flashing, rooting, debloating, and permanently locking down the **Amazon Fire TV Stick Lite** (model code **`AFTSS`**, codename **`sheldon`**).
 
+> [!TIP]
+> 🐣 **New to modding or non-technical? Start with our [Beginner's Guide](docs/BEGINNERS_GUIDE.md)!**  
+> It explains everything in plain English: how to test your USB cable, reveal hidden Developer Options by tapping 7 times, enable ADB debugging, connect over Wi-Fi, and accept the on-screen prompt with your remote.
+
+---
+
+## 🚀 Quick Start for Beginners
+
+If you just want to speed up your Fire TV and remove all ads without reading complex code:
+
+1. **Follow the [Beginner's Guide](docs/BEGINNERS_GUIDE.md)** to turn on **ADB Debugging** on your TV stick.
+2. **Connect your computer** to your Fire TV over your home Wi-Fi:
+   ```bash
+   adb connect <YOUR_FIRE_TV_IP>:5555
+   ```
+3. **Run the 1-Click Debloat Script**:
+   ```bash
+   ./scripts/debloat_and_block_ota.sh
+   ```
+*That's it! Your stick will instantly drop idle RAM usage from ~850MB to ~350MB, kill background ad engines, and block Amazon from pushing updates.*
+
 ---
 
 ## Table of Contents
-1. [Device Specifications](#device-specifications)
-2. [Why Stock Fire OS 7 Over LineageOS 20?](#why-stock-fire-os-7-over-lineageos-20)
-3. [Bootrom Exploit & amonet Architecture](#bootrom-exploit--amonet-architecture)
-4. [Permanent TWRP Recovery](#permanent-twrp-recovery)
-5. [Magisk 27.0 Root & Silent Superuser](#magisk-270-root--silent-superuser)
-6. [Bluetooth Remote Pairing Deadlock Resolution](#bluetooth-remote-pairing-deadlock-resolution)
-7. [Permanent Two-Tier OTA Lockdown](#permanent-two-tier-ota-lockdown)
-8. [Telemetry Decimation & Speed Debloat](#telemetry-decimation--speed-debloat)
-9. [Automated Scripts Directory](#automated-scripts-directory)
-10. [Proof & Evidence Gallery](#proof--evidence-gallery)
+1. [Beginner's Guide (Start Here)](docs/BEGINNERS_GUIDE.md)
+2. [Device Specifications](#device-specifications)
+3. [Required Files & Download Sources](#required-files--download-sources)
+4. [Why Stock Fire OS 7 Over LineageOS 20?](#why-stock-fire-os-7-over-lineageos-20)
+5. [Bootrom Exploit & amonet Architecture](#bootrom-exploit--amonet-architecture)
+6. [Permanent TWRP Recovery](#permanent-twrp-recovery)
+7. [Magisk 27.0 Root & Silent Superuser](#magisk-270-root--silent-superuser)
+8. [Bluetooth Remote Pairing Deadlock Resolution](#bluetooth-remote-pairing-deadlock-resolution)
+9. [Permanent Two-Tier OTA Lockdown](#permanent-two-tier-ota-lockdown)
+10. [Telemetry Decimation & Speed Debloat](#telemetry-decimation--speed-debloat)
+11. [Automated Scripts Directory](#automated-scripts-directory)
+12. [Proof & Evidence Gallery](#proof--evidence-gallery)
+
+---
+
+## Required Files & Download Sources
+
+Here are the exact files and direct links you need:
+
+| File / Component | Purpose | Official Direct Source |
+| :--- | :--- | :--- |
+| **Google Platform-Tools** | Contains `adb` & `fastboot` command line | [Google Developers Official](https://developer.android.com/tools/releases/platform-tools) |
+| **Magisk v27.0** | Systemless root zip for TWRP installation | [Magisk GitHub Releases](https://github.com/topjohnwu/Magisk/releases) |
+| **TWRP 3.6.1_9-0 (`sheldon`)** | Custom recovery image | [XDA Sheldon Thread](https://forum.xda-developers.com/t/unlock-root-twrp-unbrick-fire-tv-stick-lite-3rd-gen-sheldon-p.4439949/) |
+| **Fire OS 7.2.8.5 Stock ROM** | Clean factory firmware base | [Amazon Software Updates](https://www.amazon.com/gp/help/customer/display.html?nodeId=G201497590) |
+| **Kamakiri (amonet) Exploit** | BootROM unlock payload & python tools | [Kamakiri Sheldon Repo](https://github.com/amonet-kamakiri) |
+
 
 ---
 

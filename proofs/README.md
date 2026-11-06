@@ -25,3 +25,20 @@ This directory contains cryptographic and visual proof of successful bootloader 
 ### 5. Wi-Fi & System Connectivity
 * **File:** [`screen_connected.png`](screen_connected.png)
 * **Proof:** Displays active 5 GHz network connectivity with persistent ADB over TCP port 5555.
+
+### 6. Network IP & Interface Settings
+* **File:** [`screen_net.png`](screen_net.png)
+* **Proof:** Shows Fire TV local network IP configuration screen.
+
+### 7. Fire TV Settings Dashboard
+* **File:** [`screen_settings.png`](screen_settings.png)
+* **Proof:** Shows clean Fire OS 7 settings layout.
+
+### 8. Wi-Fi Connection Screen
+* **File:** [`screen_wifi.png`](screen_wifi.png)
+* **Proof:** Shows Wi-Fi connection established.
+
+### 9. Magisk Superuser Request Dialog
+* **File:** [`magisk_prompt.png`](magisk_prompt.png)
+* **Proof:** Displays the root elevation prompt for UID 2000 before permanent policy grant.
+
